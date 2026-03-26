@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '@/context/AppContext';
 import DoseCard from '@/components/DoseCard';
-import { Leaf, TrendingUp, AlertTriangle, Clock, Plus, Pill } from 'lucide-react';
+import { TrendingUp, AlertTriangle, Clock, Plus, Pill } from 'lucide-react';
+import ZLogo from '@/components/ZLogo';
 import type { Treatment } from '@/types/treatment';
 
 const calcDaysRemaining = (t: Treatment): number | null => {
@@ -57,10 +58,10 @@ const Dashboard = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
-              <Leaf className="w-5 h-5 text-primary" />
+              <ZLogo className="w-5 h-5" />
             </div>
             <div>
-              <h1 className="text-lg font-bold leading-tight">Memomed</h1>
+              <h1 className="text-lg font-bold leading-tight">Zi de zi</h1>
               <span className="text-[10px] text-muted-foreground font-medium">by Zenyth</span>
             </div>
           </div>
@@ -109,7 +110,7 @@ const Dashboard = () => {
               <img src={nextDose.treatment.wooProductImage} alt={nextDose.treatment.name} className="w-12 h-12 rounded-xl object-cover" />
             ) : (
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                <Leaf className="w-6 h-6 text-primary" />
+                <ZLogo className="w-6 h-6" />
               </div>
             )}
             <div className="flex-1">
