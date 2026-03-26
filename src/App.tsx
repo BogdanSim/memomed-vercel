@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom';
 import { Toaster as Sonner } from '@/components/ui/sonner';
@@ -7,6 +8,7 @@ import { AuthProvider } from '@/context/AuthContext';
 import { CartProvider } from '@/context/CartContext';
 import RequireAuth from '@/components/RequireAuth';
 import BottomNav from '@/components/BottomNav';
+import SplashScreen from '@/components/SplashScreen';
 import Dashboard from '@/pages/Dashboard';
 import AddTreatment from '@/pages/AddTreatment';
 import TreatmentsList from '@/pages/TreatmentsList';
@@ -28,10 +30,16 @@ const ProtectedShell = () => (
   </div>
 );
 
-const App = () => (
+const App = () => {
+  const [splashDone, setSplashDone] = useState(false);
+
+  const handleSplashDone = () => setSplashDone(true);
+
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Sonner />
+      {!splashDone && <SplashScreen onDone={handleSplashDone} />}
       <BrowserRouter>
         <AuthProvider>
           <AppProvider>
@@ -59,6 +67,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;

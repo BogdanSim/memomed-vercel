@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useState } from 'react';
-import { useLocation, useNavigate, type Location } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Leaf } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
@@ -7,16 +7,13 @@ import { useAuth } from '@/context/AuthContext';
 const Login = () => {
   const { isAuthenticated, login } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const redirectAfterLogin = () => {
-    const state = location.state as { from?: Location } | undefined;
-    const next = state?.from?.pathname ?? '/';
-    navigate(next, { replace: true });
+    navigate('/', { replace: true });
   };
 
   useEffect(() => {
