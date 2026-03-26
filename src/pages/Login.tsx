@@ -42,7 +42,7 @@ const Login = () => {
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-sm bg-card border border-border rounded-3xl p-6 shadow-lg">
         <div className="flex flex-col items-center text-center mb-6">
           <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-3">
-            <ZLogo className="w-7 h-7" />
+            <ZLogo className="w-10 h-10" />
           </div>
           <h1 className="text-xl font-bold">Zi de zi</h1>
           <p className="text-sm text-muted-foreground">Conectează-te pentru a-ți vedea programul</p>

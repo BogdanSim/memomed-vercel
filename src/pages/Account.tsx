@@ -101,7 +101,7 @@ const Account = () => {
       </motion.div>
 
       <p className="text-[10px] text-muted-foreground text-center mt-8">
-        Memomed by Zenyth · Versiunea 1.0.0
+        Zi de zi by Zenyth · Versiunea 1.0.0
       </p>
     </div>
   );

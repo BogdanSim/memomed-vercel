@@ -58,7 +58,7 @@ const Dashboard = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
-              <ZLogo className="w-5 h-5" />
+              <ZLogo className="w-7 h-7" />
             </div>
             <div>
               <h1 className="text-lg font-bold leading-tight">Zi de zi</h1>
