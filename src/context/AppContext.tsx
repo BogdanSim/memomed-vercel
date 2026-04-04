@@ -10,6 +10,7 @@ interface AppState {
   isSyncing: boolean;
   refresh: () => Promise<void>;
   addTreatment: (payload: Omit<Treatment, 'id' | 'userId'>) => Promise<void>;
+  updateTreatment: (treatmentId: string, payload: Omit<Treatment, 'id' | 'userId'>) => Promise<void>;
   removeTreatment: (treatmentId: string) => Promise<void>;
   updateIntakeStatus: (logId: string, status: IntakeLog['status']) => Promise<void>;
   logout: () => void;
@@ -143,6 +144,32 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     await refresh();
   }, [user, refresh]);
 
+  const updateTreatment = useCallback(async (treatmentId: string, payload: Omit<Treatment, 'id' | 'userId'>) => {
+    if (!user) throw new Error('Neautentificat');
+    const { error } = await supabase
+      .from('treatments')
+      .update({
+        name: payload.name,
+        type: payload.type,
+        source: payload.source,
+        woo_product_id: payload.wooProductId ?? null,
+        woo_product_image: payload.wooProductImage ?? null,
+        frequency_per_day: payload.frequencyPerDay,
+        units_per_intake: payload.unitsPerIntake,
+        unit_label: payload.unitLabel,
+        meal_condition: payload.mealCondition,
+        times: payload.times,
+        start_date: payload.startDate,
+        end_date: payload.endDate ?? null,
+        notes: payload.notes ?? null,
+        package_size: payload.packageSize ?? null,
+      })
+      .eq('id', treatmentId)
+      .eq('user_id', user.id);
+    if (error) throw error;
+    await refresh();
+  }, [user, refresh]);
+
   const removeTreatment = useCallback(async (treatmentId: string) => {
     if (!user) throw new Error('Neautentificat');
     const { error } = await supabase
@@ -167,6 +194,25 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     queryClient.setQueryData<IntakeLog[]>(['intakeLogs', today], (prev = []) =>
       prev.map(log => (log.id === updated.id ? updated : log))
     );
+
+    // Dacă doza a fost amânată, o readucem la "pending" după 30 de minute
+    if (status === 'snoozed') {
+      setTimeout(async () => {
+        const { data: current } = await supabase
+          .from('intake_logs')
+          .select('status')
+          .eq('id', logId)
+          .single();
+        // Readucem la pending doar dacă e încă amânată (nu a fost luată între timp)
+        if (current?.status === 'snoozed') {
+          await supabase
+            .from('intake_logs')
+            .update({ status: 'pending', updated_at: new Date().toISOString() })
+            .eq('id', logId);
+          queryClient.invalidateQueries({ queryKey: ['intakeLogs', today] });
+        }
+      }, 30 * 60 * 1000); // 30 minute
+    }
   }, [queryClient, today]);
 
   const value = useMemo<AppState>(() => ({
@@ -175,10 +221,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     isSyncing: treatmentsQuery.isFetching || intakeLogsQuery.isFetching,
     refresh,
     addTreatment,
+    updateTreatment,
     removeTreatment,
     updateIntakeStatus,
     logout: authLogout,
-  }), [treatmentsQuery.data, treatmentsQuery.isFetching, intakeLogsQuery.data, intakeLogsQuery.isFetching, refresh, addTreatment, removeTreatment, updateIntakeStatus, authLogout]);
+  }), [treatmentsQuery.data, treatmentsQuery.isFetching, intakeLogsQuery.data, intakeLogsQuery.isFetching, refresh, addTreatment, updateTreatment, removeTreatment, updateIntakeStatus, authLogout]);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

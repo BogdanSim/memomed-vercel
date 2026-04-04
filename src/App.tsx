@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { usePushNotifications } from '@/hooks/usePushNotifications';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom';
+import { HashRouter, Route, Routes, Outlet } from 'react-router-dom';
 import { Toaster as Sonner } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { AppProvider } from '@/context/AppContext';
@@ -18,13 +19,14 @@ import Refill from '@/pages/Refill';
 import Checkout from '@/pages/Checkout';
 import Account from '@/pages/Account';
 import AccountSection from '@/pages/AccountSection';
+import EditTreatment from '@/pages/EditTreatment';
 import NotFound from '@/pages/NotFound';
 import Login from '@/pages/Login';
 
 const queryClient = new QueryClient();
 
 const ProtectedShell = () => (
-  <div className="min-h-screen bg-background">
+  <div className="min-h-screen bg-background pt-safe">
     <Outlet />
     <BottomNav />
   </div>
@@ -32,6 +34,7 @@ const ProtectedShell = () => (
 
 const App = () => {
   const [splashDone, setSplashDone] = useState(false);
+  usePushNotifications();
 
   const handleSplashDone = () => setSplashDone(true);
 
@@ -40,7 +43,7 @@ const App = () => {
     <TooltipProvider>
       <Sonner />
       {!splashDone && <SplashScreen onDone={handleSplashDone} />}
-      <BrowserRouter>
+      <HashRouter>
         <AuthProvider>
           <AppProvider>
             <CartProvider>
@@ -50,6 +53,7 @@ const App = () => {
                 <Route element={<ProtectedShell />}>
                   <Route index element={<Dashboard />} />
                   <Route path="add" element={<AddTreatment />} />
+                  <Route path="edit/:id" element={<EditTreatment />} />
                   <Route path="treatments" element={<TreatmentsList />} />
                   <Route path="calendar" element={<CalendarView />} />
                   <Route path="report" element={<Report />} />
@@ -64,7 +68,7 @@ const App = () => {
             </CartProvider>
           </AppProvider>
         </AuthProvider>
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
   );

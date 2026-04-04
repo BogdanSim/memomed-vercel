@@ -17,6 +17,13 @@ const calcDaysRemaining = (t: Treatment): number | null => {
   return Math.max(0, Math.floor(remaining / dailyUsage));
 };
 
+const getGreeting = () => {
+  const hour = new Date().getHours();
+  if (hour >= 5 && hour < 12) return 'Bună dimineața';
+  if (hour >= 12 && hour < 18) return 'Bună ziua';
+  return 'Bună seara';
+};
+
 const Dashboard = () => {
   const { treatments, intakeLogs } = useApp();
   const navigate = useNavigate();
@@ -52,13 +59,13 @@ const Dashboard = () => {
 
 
   return (
-    <div className="pb-24 px-4 pt-4 max-w-lg mx-auto">
+    <div className="pb-32 px-4 pt-4 max-w-lg mx-auto overflow-x-hidden">
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="mb-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
-              <ZLogo className="w-[2.906rem] h-[2.906rem]" />
+              <ZLogo className="w-7 h-7" />
             </div>
             <div>
               <h1 className="text-lg font-bold leading-tight">Zi de zi</h1>
@@ -69,7 +76,7 @@ const Dashboard = () => {
             <Plus className="w-5 h-5 text-primary" />
           </button>
         </div>
-        <p className="text-sm text-muted-foreground mt-3">Bună ziua! Iată programul de azi.</p>
+        <p className="text-sm text-muted-foreground mt-3">{getGreeting()}! Iată programul de azi.</p>
       </motion.div>
 
       {/* Progress */}
@@ -126,7 +133,7 @@ const Dashboard = () => {
       {lowStockTreatments.length > 0 && (
         <div className="mb-5 space-y-2">
           {lowStockTreatments.slice(0, 2).map(({ treatment, daysRemaining }) => (
-            <motion.div key={treatment.id} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }}
+            <motion.div key={treatment.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }}
               className="flex items-center gap-3 bg-card rounded-2xl border border-border p-3 border-l-4 border-l-warning">
               <AlertTriangle className="w-5 h-5 text-warning flex-shrink-0" />
               <div className="flex-1 min-w-0">

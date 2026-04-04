@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useApp } from '@/context/AppContext';
-import { Pill, Leaf, ShoppingCart, ChevronRight, AlertTriangle, X } from 'lucide-react';
+import { Pill, Leaf, ShoppingCart, ChevronRight, AlertTriangle, X, Pencil } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { zenythProducts } from '@/data/zenythProducts';
 import { toast } from 'sonner';
@@ -90,13 +90,22 @@ const TreatmentsList = () => {
                 </button>
               )}
 
-              <button
-                onClick={() => handleCancelTreatment(t.id, t.name)}
-                className="mt-3 w-full h-9 rounded-xl bg-secondary text-secondary-foreground text-xs font-medium flex items-center justify-center gap-1.5 active:scale-95 transition-transform border border-border"
-              >
-                <X className="w-3.5 h-3.5" />
-                Renunță la acest tratament
-              </button>
+              <div className="mt-3 flex gap-2">
+                <button
+                  onClick={() => navigate(`/edit/${t.id}`)}
+                  className="flex-1 h-9 rounded-xl bg-secondary text-secondary-foreground text-xs font-medium flex items-center justify-center gap-1.5 active:scale-95 transition-transform border border-border"
+                >
+                  <Pencil className="w-3.5 h-3.5" />
+                  Editează
+                </button>
+                <button
+                  onClick={() => handleCancelTreatment(t.id, t.name)}
+                  className="flex-1 h-9 rounded-xl bg-secondary text-secondary-foreground text-xs font-medium flex items-center justify-center gap-1.5 active:scale-95 transition-transform border border-border"
+                >
+                  <X className="w-3.5 h-3.5" />
+                  Renunță
+                </button>
+              </div>
             </motion.div>
           );
         })}
