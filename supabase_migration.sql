@@ -163,53 +163,53 @@ insert into public.products
    category, description, url, units_per_intake, frequency_per_day, days_remaining, total_days)
 values
   ('58278', '5-HTP 100 mg, 30 capsule', '5HTP',
-   'https://zenyth.work/staging120426/wp-content/uploads/2021/08/5-HTP-Fara-reflexie-96DPI.jpg',
+   'https://zenyth.work/staging020726/wp-content/uploads/2021/08/5-HTP-Fara-reflexie-96DPI.jpg',
    60, 'RON', 30, 'capsule', '', 'Vezi detalii pe site.',
-   'https://zenyth.work/staging120426/produse/5-htp-100-mg/', 1, 1, 11, 30),
+   'https://zenyth.work/staging020726/produse/5-htp-100-mg/', 1, 1, 11, 30),
 
   ('41525', 'Acerola BIO 400 mg, 60 capsule', 'BIOACR60CPS',
-   'https://zenyth.work/staging120426/wp-content/uploads/2016/03/Bio-Acerola-Capsule-Fara-reflexie-96DPI-1.jpg',
+   'https://zenyth.work/staging020726/wp-content/uploads/2016/03/Bio-Acerola-Capsule-Fara-reflexie-96DPI-1.jpg',
    95, 'RON', 60, 'capsule', '', 'Vezi detalii pe site.',
-   'https://zenyth.work/staging120426/produse/bio-acerola-60-capsule-x-400-mg/', 1, 1, 21, 60),
+   'https://zenyth.work/staging020726/produse/bio-acerola-60-capsule-x-400-mg/', 1, 1, 21, 60),
 
   ('5660', 'Acid Alfa Lipoic 250 mg, 60 capsule', 'ALA60CPS',
-   'https://zenyth.work/staging120426/wp-content/uploads/2016/03/Alpha-Lipoic-Acid-Fara-reflexie-96DPI.jpg',
+   'https://zenyth.work/staging020726/wp-content/uploads/2016/03/Alpha-Lipoic-Acid-Fara-reflexie-96DPI.jpg',
    95, 'RON', 60, 'capsule', '', 'Vezi detalii pe site.',
-   'https://zenyth.work/staging120426/produse/alpha-lipoic-acid/', 1, 1, 21, 60),
+   'https://zenyth.work/staging020726/produse/alpha-lipoic-acid/', 1, 1, 21, 60),
 
   ('54693', 'Acid hialuronic si Colagen complex, 30 capsule', 'HYACD30CPS',
-   'https://zenyth.work/staging120426/wp-content/uploads/2020/05/Hyaluronic-Acid-NEW-30-CPS-Fara-reflexie-96DPI.jpg',
+   'https://zenyth.work/staging020726/wp-content/uploads/2020/05/Hyaluronic-Acid-NEW-30-CPS-Fara-reflexie-96DPI.jpg',
    39, 'RON', 30, 'capsule', '', 'Vezi detalii pe site.',
-   'https://zenyth.work/staging120426/produse/hyaluronic-acid-30-capsule/', 1, 1, 11, 30),
+   'https://zenyth.work/staging020726/produse/hyaluronic-acid-30-capsule/', 1, 1, 11, 30),
 
   ('40906', 'Acid hialuronic si Colagen complex, 60 capsule', 'HYACD60CPS',
-   'https://zenyth.work/staging120426/wp-content/uploads/2018/04/Hyaluronic-Acid-60-CPS-Fara-reflexie-96DPI.jpg',
+   'https://zenyth.work/staging020726/wp-content/uploads/2018/04/Hyaluronic-Acid-60-CPS-Fara-reflexie-96DPI.jpg',
    46, 'RON', 60, 'capsule', '', 'Vezi detalii pe site.',
-   'https://zenyth.work/staging120426/produse/hyaluronic-acid-with-collagen-complex-60-cps-700-mg/', 1, 1, 21, 60),
+   'https://zenyth.work/staging020726/produse/hyaluronic-acid-with-collagen-complex-60-cps-700-mg/', 1, 1, 21, 60),
 
   ('57265', 'AdaptoHelp Complex, 30 capsule', 'ADAPTHELP30',
-   'https://zenyth.work/staging120426/wp-content/uploads/2021/01/AdaptoHelp-Fara-reflexie-96DPI.jpg',
+   'https://zenyth.work/staging020726/wp-content/uploads/2021/01/AdaptoHelp-Fara-reflexie-96DPI.jpg',
    88, 'RON', 30, 'capsule', '', 'Vezi detalii pe site.',
-   'https://zenyth.work/staging120426/produse/adaptohelp-complex/', 1, 1, 11, 30),
+   'https://zenyth.work/staging020726/produse/adaptohelp-complex/', 1, 1, 11, 30),
 
   ('54542', 'Andrographis, 30 capsule', 'ANDRO30CPS',
-   'https://zenyth.work/staging120426/wp-content/uploads/2020/04/Andrographis-Fara-reflexie-96DPI.jpg',
+   'https://zenyth.work/staging020726/wp-content/uploads/2020/04/Andrographis-Fara-reflexie-96DPI.jpg',
    53, 'RON', 30, 'capsule', '', 'Vezi detalii pe site.',
-   'https://zenyth.work/staging120426/produse/andrographis/', 1, 1, 11, 30),
+   'https://zenyth.work/staging020726/produse/andrographis/', 1, 1, 11, 30),
 
   ('199449', 'Anorexia si alte tulburari de alimentatie', 'ANOREXTLB',
-   'https://zenyth.work/staging120426/wp-content/uploads/2025/05/Eva-Musby-Anorexia-1.png',
+   'https://zenyth.work/staging020726/wp-content/uploads/2025/05/Eva-Musby-Anorexia-1.png',
    39, 'RON', 0, '', '', 'Vezi detalii pe site.',
-   'https://zenyth.work/staging120426/produse/anorexia-si-alte-tulburari-de-alimentatie/', 1, 1, 11, 30),
+   'https://zenyth.work/staging020726/produse/anorexia-si-alte-tulburari-de-alimentatie/', 1, 1, 11, 30),
 
   ('185494', 'Anti-Aging Support, 30 capsule', 'ANTIAGESUPPORT30CPS',
-   'https://zenyth.work/staging120426/wp-content/uploads/2025/03/Anti-Aging-Support-Fara-reflexie-96DPI.jpg',
+   'https://zenyth.work/staging020726/wp-content/uploads/2025/03/Anti-Aging-Support-Fara-reflexie-96DPI.jpg',
    67, 'RON', 30, 'capsule', '', 'Vezi detalii pe site.',
-   'https://zenyth.work/staging120426/produse/anti-aging-support-30-capsule/', 1, 1, 11, 30),
+   'https://zenyth.work/staging020726/produse/anti-aging-support-30-capsule/', 1, 1, 11, 30),
 
   ('41484', 'ArtroHelp Forte, 14 plicuri x 5 g', 'AHF14PL',
-   'https://zenyth.work/staging120426/wp-content/uploads/2018/09/ArtroHelp-Forte-14-plicuri-Fata-96-DPI.jpg',
+   'https://zenyth.work/staging020726/wp-content/uploads/2018/09/ArtroHelp-Forte-14-plicuri-Fata-96-DPI.jpg',
    60, 'RON', 14, 'plicuri', '', 'Vezi detalii pe site.',
-   'https://zenyth.work/staging120426/produse/artrohelp-forte-14plicuri-x-5-g-pulbere/', 1, 1, 5, 14)
+   'https://zenyth.work/staging020726/produse/artrohelp-forte-14plicuri-x-5-g-pulbere/', 1, 1, 5, 14)
 
 on conflict (id) do nothing;

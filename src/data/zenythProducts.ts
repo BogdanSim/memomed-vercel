@@ -172,9 +172,9 @@ const rawZenythProducts: RawZenythProduct[] = [
     name: "5-HTP 100 mg, 30 capsule",
     sku: "5HTP",
     image:
-      "https://zenyth.work/staging120426/wp-content/uploads/2021/08/5-HTP-Fara-reflexie-96DPI.jpg",
+      "https://zenyth.work/staging020726/wp-content/uploads/2021/08/5-HTP-Fara-reflexie-96DPI.jpg",
     permalink:
-      "https://zenyth.work/staging120426/produse/5-htp-100-mg/",
+      "https://zenyth.work/staging020726/produse/5-htp-100-mg/",
     units_per_package: null,
     refill_enabled: true,
   },
@@ -183,9 +183,9 @@ const rawZenythProducts: RawZenythProduct[] = [
     name: "Acerola BIO 400 mg, 60 capsule",
     sku: "BIOACR60CPS",
     image:
-      "https://zenyth.work/staging120426/wp-content/uploads/2016/03/Bio-Acerola-Capsule-Fara-reflexie-96DPI-1.jpg",
+      "https://zenyth.work/staging020726/wp-content/uploads/2016/03/Bio-Acerola-Capsule-Fara-reflexie-96DPI-1.jpg",
     permalink:
-      "https://zenyth.work/staging120426/produse/bio-acerola-60-capsule-x-400-mg/",
+      "https://zenyth.work/staging020726/produse/bio-acerola-60-capsule-x-400-mg/",
     units_per_package: null,
     refill_enabled: true,
   },
@@ -194,9 +194,9 @@ const rawZenythProducts: RawZenythProduct[] = [
     name: "Acid Alfa Lipoic 250 mg, 60 capsule",
     sku: "ALA60CPS",
     image:
-      "https://zenyth.work/staging120426/wp-content/uploads/2016/03/Alpha-Lipoic-Acid-Fara-reflexie-96DPI.jpg",
+      "https://zenyth.work/staging020726/wp-content/uploads/2016/03/Alpha-Lipoic-Acid-Fara-reflexie-96DPI.jpg",
     permalink:
-      "https://zenyth.work/staging120426/produse/alpha-lipoic-acid/",
+      "https://zenyth.work/staging020726/produse/alpha-lipoic-acid/",
     units_per_package: null,
     refill_enabled: true,
   },
@@ -205,9 +205,9 @@ const rawZenythProducts: RawZenythProduct[] = [
     name: "Acid hialuronic si Colagen complex, 30 capsule",
     sku: "HYACD30CPS",
     image:
-      "https://zenyth.work/staging120426/wp-content/uploads/2020/05/Hyaluronic-Acid-NEW-30-CPS-Fara-reflexie-96DPI.jpg",
+      "https://zenyth.work/staging020726/wp-content/uploads/2020/05/Hyaluronic-Acid-NEW-30-CPS-Fara-reflexie-96DPI.jpg",
     permalink:
-      "https://zenyth.work/staging120426/produse/hyaluronic-acid-30-capsule/",
+      "https://zenyth.work/staging020726/produse/hyaluronic-acid-30-capsule/",
     units_per_package: null,
     refill_enabled: true,
   },
@@ -216,9 +216,9 @@ const rawZenythProducts: RawZenythProduct[] = [
     name: "Acid hialuronic si Colagen complex, 60 capsule",
     sku: "HYACD60CPS",
     image:
-      "https://zenyth.work/staging120426/wp-content/uploads/2018/04/Hyaluronic-Acid-60-CPS-Fara-reflexie-96DPI.jpg",
+      "https://zenyth.work/staging020726/wp-content/uploads/2018/04/Hyaluronic-Acid-60-CPS-Fara-reflexie-96DPI.jpg",
     permalink:
-      "https://zenyth.work/staging120426/produse/hyaluronic-acid-with-collagen-complex-60-cps-700-mg/",
+      "https://zenyth.work/staging020726/produse/hyaluronic-acid-with-collagen-complex-60-cps-700-mg/",
     units_per_package: null,
     refill_enabled: true,
   },
@@ -227,9 +227,9 @@ const rawZenythProducts: RawZenythProduct[] = [
     name: "AdaptoHelp Complex, 30 capsule",
     sku: "ADAPTHELP30",
     image:
-      "https://zenyth.work/staging120426/wp-content/uploads/2021/01/AdaptoHelp-Fara-reflexie-96DPI.jpg",
+      "https://zenyth.work/staging020726/wp-content/uploads/2021/01/AdaptoHelp-Fara-reflexie-96DPI.jpg",
     permalink:
-      "https://zenyth.work/staging120426/produse/adaptohelp-complex/",
+      "https://zenyth.work/staging020726/produse/adaptohelp-complex/",
     units_per_package: null,
     refill_enabled: true,
   },
@@ -238,9 +238,9 @@ const rawZenythProducts: RawZenythProduct[] = [
     name: "Andrographis, 30 capsule",
     sku: "ANDRO30CPS",
     image:
-      "https://zenyth.work/staging120426/wp-content/uploads/2020/04/Andrographis-Fara-reflexie-96DPI.jpg",
+      "https://zenyth.work/staging020726/wp-content/uploads/2020/04/Andrographis-Fara-reflexie-96DPI.jpg",
     permalink:
-      "https://zenyth.work/staging120426/produse/andrographis/",
+      "https://zenyth.work/staging020726/produse/andrographis/",
     units_per_package: null,
     refill_enabled: true,
   },
@@ -249,9 +249,9 @@ const rawZenythProducts: RawZenythProduct[] = [
     name: "Anorexia si alte tulburari de alimentatie",
     sku: "ANOREXTLB",
     image:
-      "https://zenyth.work/staging120426/wp-content/uploads/2025/05/Eva-Musby-Anorexia-1.png",
+      "https://zenyth.work/staging020726/wp-content/uploads/2025/05/Eva-Musby-Anorexia-1.png",
     permalink:
-      "https://zenyth.work/staging120426/produse/anorexia-si-alte-tulburari-de-alimentatie/",
+      "https://zenyth.work/staging020726/produse/anorexia-si-alte-tulburari-de-alimentatie/",
     units_per_package: null,
     refill_enabled: true,
   },
@@ -260,9 +260,9 @@ const rawZenythProducts: RawZenythProduct[] = [
     name: "Anti-Aging Support, 30 capsule",
     sku: "ANTIAGESUPPORT30CPS",
     image:
-      "https://zenyth.work/staging120426/wp-content/uploads/2025/03/Anti-Aging-Support-Fara-reflexie-96DPI.jpg",
+      "https://zenyth.work/staging020726/wp-content/uploads/2025/03/Anti-Aging-Support-Fara-reflexie-96DPI.jpg",
     permalink:
-      "https://zenyth.work/staging120426/produse/anti-aging-support-30-capsule/",
+      "https://zenyth.work/staging020726/produse/anti-aging-support-30-capsule/",
     units_per_package: null,
     refill_enabled: true,
   },
@@ -271,9 +271,9 @@ const rawZenythProducts: RawZenythProduct[] = [
     name: "ArtroHelp Forte, 14 plicuri x 5 g",
     sku: "AHF14PL",
     image:
-      "https://zenyth.work/staging120426/wp-content/uploads/2018/09/ArtroHelp-Forte-14-plicuri-Fata-96-DPI.jpg",
+      "https://zenyth.work/staging020726/wp-content/uploads/2018/09/ArtroHelp-Forte-14-plicuri-Fata-96-DPI.jpg",
     permalink:
-      "https://zenyth.work/staging120426/produse/artrohelp-forte-14plicuri-x-5-g-pulbere/",
+      "https://zenyth.work/staging020726/produse/artrohelp-forte-14plicuri-x-5-g-pulbere/",
     units_per_package: null,
     refill_enabled: true,
   },
